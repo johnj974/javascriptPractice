@@ -1,0 +1,13 @@
+h1{
+    color: orangered;
+    text-align: center;
+}
+
+#outputDiv{
+    height: 100px;
+    border: 1px solid black;
+}
+
+h2{
+    color: hsl(209, 100%, 68%);
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Practice</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   
+   <h1>Javascript Practice</h1>
+   <h2>Change Color</h2>
+   <button onclick="changeColor()">Change Headings</button> 
+   
+   <h2>While loop</h2>
+   <p id="output1"></p>
+   <button onclick="count()">While</button>
+
+   <h2>Do While Loop</h2>
+   <p id="output2"></p>
+   <button onclick="anotherCount()">DoWhile</button>
+
+   <h2>For Loop</h2>
+   <p id="output3"></p>
+   <button onclick="forLoop()">ForLoop</button>
+
+   <h2>Arrays</h2>
+   <p id="output4"></p>
+   <button onclick="array()">Array</button>
+
+   <h2>Loop Through Arrays</h2>
+   <p id="output5"></p>
+   <button onclick="arrayLoop()">ArrayLoop</button>
+
+   <h2>Functions using input values</h2>
+   <h3>Password:<input type="password" id="password" onchange="checkPW(this.value)"/></h3>
+   <p><output id="pwStatus"></output></p>
+
+   <h2>Object creation</h2>
+   <p id = "output6"></p>
+   <button onclick="dogObject()">ArrayLoop</button>
+
+   <h2>Form Validation</h2>
+   <div id = "outputDiv"></div>
+   <form id= "input" name="myForm" onsubmit="return false">
+   <p>Name: 
+   <input type="text" name="fname" id="fname"></p>
+   <p>Color:
+   <input type="color" name="color" id="color"></p>
+   <p>Icecream:
+   <select name="icecream" id="icecream">
+   <option>Vanilla</option>
+   <option>Strawberry</option>
+   <option>Chocolate</option>
+   </select></p>
+   <p>Call Me:
+   <label for="yes"><input type="radio" name="contact" id="yes" value="yes">Please Call</label>
+   <label for="no"><input type="radio" name="contact" id="no" value="no">Do Not Call</label>
+   </p>
+   <button onclick="validation()">Validate Me</button>
+   </form>
+
+   <h2>Taking input and manipulating</h2>
+   <p>
+   <input type="number" id="number">
+   <button onclick="numAddition()">addFive</button>
+    <span id="outputNum"></span>
+   </p>
+
+   <h2>FizzBuzz</h2>
+   <button onclick="fizzBuzz()">FizzBuzz</button>
+   <p id="fbOutput"></p>
+
+   <h2>Fizzbuzz with user input</h2>
+   <input id="fbInput" type="number">
+   <button onclick="outputFizzBuzz()">calcFizzBuzz</button>
+   <p id="fizzOutput"></p> 
+
+</body>
+</html>
