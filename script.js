@@ -147,5 +147,96 @@ function outputFizzBuzz()
 
 function changeColor()
     {
-        document.getElementsByTagName("h2").style.color = "red";
+        
+        let x = document.getElementsByTagName("h2").style.color = "blue"
+        document.getElementsByTagName("h2").style.color = x
     }
+
+let timestamp = new Date();
+console.log(timestamp);
+console.log(timestamp.toString());
+
+// Object Literals
+const person = 
+{
+    firstName : "john",
+    lastName : "doe",
+    age : 30,
+    hobbies : ["music", "movies", "sport"],
+    address : 
+    {
+        street : "50 main st",
+        city : "boston",
+        state : "maine"
+    }
+}
+person.email = "john@gmail.com"  // adding a property to an object literal
+
+//  Arrays with objects
+const toDos = 
+[
+    {
+        id : 1,
+        text : "take out trash",
+        isCompleted : true
+    },
+    {
+        id : 2,
+        text : "wash the dishes",
+        isCompleted : true
+    },
+    {
+        id : 3,
+        text : "cut the lawn",
+        isCompleted : false
+    }
+]
+
+const todoJSON = JSON.stringify(toDos);  // how to convert data to JSON format
+
+console.log(toDos)
+console.log(toDos[1].text)
+
+// For Loops
+for (let i = 0; i < 10; i++)
+{
+    console.log(`for loop number: ${i}`)
+}
+
+// While Loops
+let i = 0;
+while (i < 10)
+{
+    console.log(`while loop number: ${i}`)
+    i++
+}
+
+// Iterating through an array method 1
+for (let i = 0; i < toDos.length; i++)
+{
+    console.log(toDos[i].text)
+}
+// Iterating through an array method 2
+// creates a temporary variable to be used to iterate through the array
+for (let tempVar of toDos)
+{
+    console.log(tempVar.text)
+}
+// High Order Array Methods used for iterating through an array
+// forEach, map, filter
+toDos.forEach(function(todo)    // todo is a temporary variable
+{
+    console.log(todo.text)
+})
+// to make a new array from an existing array use .map
+const todoId = toDos.map(function(todo)
+{
+    return todo.id
+})
+console.log(todoId)
+// to filter through an array based on certain requirements
+const todoCompleted = toDos.filter(function(todo)
+{
+    return todo.isCompleted === true
+})
+console.log(todoCompleted)
