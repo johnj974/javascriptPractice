@@ -147,9 +147,11 @@ function outputFizzBuzz()
 
 function changeColor()
     {
-        
-        let x = document.getElementsByTagName("h2").style.color = "blue"
-        document.getElementsByTagName("h2").style.color = x
+        const changeColor = document.querySelectorAll("h2");
+        let i;
+        for (i = 0; i<changeColor.length; i++){
+            changeColor[i].style.color = "hsl(220, 80%, 30%)"
+        }
     }
 
 let timestamp = new Date();
