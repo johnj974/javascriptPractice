@@ -240,3 +240,89 @@ const todoCompleted = toDos.filter(function(todo)
     return todo.isCompleted === true
 })
 console.log(todoCompleted)
+
+// conditional statements
+const x = 12;
+if (x === 10){
+    console.log(`x is equal to 10, it is ${x}`)
+}
+else if (x > 10)
+{
+    console.log(`x is greater than 10, it is ${x}`)
+}
+else{
+    console.log(`x is less than 10, it is ${x}`)
+}
+
+//Ternary Operator
+const tern = 10
+const color = tern > 10 ? "red" : "blue"  // is tern variable greater than 10? assign red if it is true, else blue if it is false.
+
+//switch statement
+switch (color)
+{
+    case "blue":
+        console.log("the color is blue")
+        break
+    case "red":
+        console.log("the color is red")
+        break
+    default:
+        console.log("the color is not red or blue")
+}
+
+//functions
+function addNum(num1, num2){
+    return num1 + num2
+}
+console.log(addNum(10, 12));
+
+const addNums = (num1, num2) =>{
+    return num1 + num2
+}
+console.log(addNums(15, 23))
+
+// Object Orientated Programming
+// Constructor function     // this acts as a template for making person objects
+function Person(firstName, lastName, dob)
+{
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+    this.getBirthYear = function(){                 // creating a method
+        return this.dob.getFullYear()               
+    }
+}
+
+// to create a method for an object and to store it in the prototype section of that object
+Person.prototype.getFullName = function(){                  // creating a method which is stored in prototype and does not immediately show in the console
+        return `${this.firstName} ${this.lastName}`
+    }
+
+// instantiate object using our constructor function template
+const person1 = new Person("mike", "raphone", "4-3-1980")
+const person2 = new Person("annette", "curtain", "7-3-1970")
+
+person2.email = "annette@gmail.com"     // adding to an object
+
+console.log(person1)
+console.log(person1.getFullName())      // calling differant methods which we created
+console.log(person2.getBirthYear())
+
+// creating a class which is similar to an object
+class Car
+{
+    constructor(make, model, year)
+    {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+    getSpecs(){
+        return `the specs for this car are ${this.make} ${this.model} ${this.year}`
+    }
+}
+
+const car1 = new Car("VW", "Passat", "2008")
+console.log(car1)
+console.log(car1.getSpecs())
