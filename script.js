@@ -1,3 +1,27 @@
+
+function halloween(){
+    let today = new Date();
+    let halloweenDay = new Date("31 October,2020")
+    let name = document.getElementById("question").value;
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    let daysUntilHalloween = parseInt((halloweenDay - today) / 86400000)
+    document.getElementById("answer").innerHTML = `Hello ${name}, Todays date is ${months[today.getMonth()]} ${today.getDate()}, 
+    Halloween is on ${months[halloweenDay.getMonth()]} ${halloweenDay.getDate()}, There are ${daysUntilHalloween} days until Halloween`
+    document.getElementById("halloween").style.backgroundColor = "hsl(39, 100%, 50%";
+}
+
+function christmas(){
+    let today = new Date();
+    let christmasDay = new Date("25 December, 2020")
+    let daysTillChristmas = parseInt((christmasDay - today) / 86400000)
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    let name = document.getElementById("name").value;
+    let short = document.getElementById("christmasAnswer");
+    short.innerHTML = `Hello ${name}, today is ${months[today.getMonth()]} ${today.getDate()}, Christmas is ${months[christmasDay.getMonth()]} 
+    ${christmasDay.getDate()}, there are ${daysTillChristmas} days until Christmas`
+}
+
+
 // while loop
 function count(){
     let x = 0
@@ -97,6 +121,8 @@ function numAddition()
     document.getElementById("outputNum").style.color = "red";
 }
 
+
+
 // Fizz Buzz
 function fizzBuzz()
 {
@@ -150,13 +176,34 @@ function changeColor()
         const changeColor = document.querySelectorAll("h2");
         let i;
         for (i = 0; i<changeColor.length; i++){
-            changeColor[i].style.color = "hsl(220, 80%, 30%)"
+            changeColor[i].style.color = "hsl(147, 100%, 31%)"
         }
     }
 
 let timestamp = new Date();
 console.log(timestamp);
 console.log(timestamp.toString());
+
+// msg displayed based on date
+function salesDay()
+{
+    let today = new Date();
+    let msg = document.getElementById("salesday");
+    switch (today.getDate())
+    {
+        case 1:
+            msg.innerHTML = "today is the first of the month, Sale on"
+            break;
+        case 7:
+            msg.innerHTML = "lucky number 7, 7% off all shopping";
+            break;
+        case 13:
+            msg.innerHTML = "Unlucky for some.. Not for you, Sale today";
+            break;
+        default:
+            msg.innerHTML = "No sale today,"
+    }
+}
 
 // Object Literals
 const person = 
@@ -173,6 +220,11 @@ const person =
     }
 }
 person.email = "john@gmail.com"  // adding a property to an object literal
+
+function obLiteral()
+{
+    document.getElementById("literal").innerHTML = `my name is ${person.firstName} ${person.lastName} and I am ${person.age} years old`
+}
 
 //  Arrays with objects
 const toDos = 

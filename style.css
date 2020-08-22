@@ -9,5 +9,22 @@ h1{
 }
 
 h2{
-    color: hsl(209, 100%, 68%);
+    color: hsl(220, 80%, 30%);
+    
+}
+
+#halloween{
+    height: 150px;
+    background-color: hsl(76, 86%, 41%);
+    text-align: center;
+    display: block;
+    padding-top:20px;
+}
+
+#christmas{
+    height: 150px;
+    background-color: hsl(0, 100%, 50%);
+    text-align: center;
+    display: block;
+    padding-top:20px;
 }
